@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    scrollbar-width: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #2c2f33, #23272a);
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.home{
+    text-align: center;
+    padding: 20px 15px;
+    background-color: #3e3e3e;
+    margin-top: 20px;
+    border-radius: 6px;
+    width: 90%;
+    color: #e0e0e0;
+}
+
+h1 {
+    font-size: 1.8em;
+    color: #e0e0e0;
+    margin-bottom: 0.4em;
+}
+
+h2 {
+    font-size: 1.2em;
+    color: #bbbbbb;
+}
+
+p {
+    font-size: 0.9em;
+}
+
+.container {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #2c2f33;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    width: 160px;
+    text-align: center;
+    transition: all .3s;
+    cursor: pointer;
+    color: #f1f1f1;
+    position: relative;
+}
+
+#b {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 8px 16px;
+    font-size: 0.85em;
+    background-color: #22a071;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow .4s;
+}
+
+
+#b:hover {
+    background-color: rgb(27, 209, 142);
+    box-shadow: 0 4px 15px rgb(34, 160, 113);
+} 
+
+
+
+i {
+    font-size: 1.5rem;
+    color: rgb(34, 160, 113);
+}
+
+.support {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #3e3e3e;
+    margin-top: 30px;
+    border-radius: 8px;
+    width: 90%;
+}
+
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+.button {
+    --border-right: 6px;
+    --text-stroke-color: rgba(255, 255, 255, 0.6);
+    --animation-color: #22A071;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+.hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+}
+
+.button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+.navbar {
+    width: 100%;
+    background-color: rgba(20, 20, 20, 0.8);
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: flex;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.navbar-logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin-left: 20px;
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 20px;
+    transition: background-color 0.3s, border-radius 0.3s;
+}
+
+.navbar-menu a:hover {
+    background-color: #115f898c;
+    border-radius: 20px;
+}
+
+.navbar-menu i {
+    font-size: 22px;
+}
+
+.label-ai::before,
+.label-beta::before,
+.label-vip::before,
+.label-error::before,
+.label-new::before {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    color: #333;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5), inset -1px -1px 3px rgba(255, 255, 255, 0.3);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));
+    transform: translateZ(0);
+    opacity: 1;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.label-ai::before {
+    content: "AI";
+    background-color: #FFD700;
+}
+
+.label-ai:hover::before {
+    content: "This tool used AI";
+    opacity: 0.8;
+}
+
+.label-beta::before {
+    content: "Beta";
+    background-color: #40E0D0;
+}
+
+.label-beta:hover::before {
+    content: "Beta Version";
+    opacity: 0.8;
+}
+
+.label-vip::before {
+    content: "VIP";
+    background-color: #FFA500;
+}
+
+.label-vip:hover::before {
+    content: "VIP Access";
+    opacity: 0.8;
+}
+
+.label-error::before {
+    content: "Error";
+    background-color: #FF4C4C;
+}
+
+.label-error:hover::before {
+    content: "Error Occurred";
+    opacity: 0.8;
+}
+
+.label-new::before {
+    content: "New";
+    background-color: #32CD32;
+}
+
+.label-new:hover::before {
+    content: "Recently Added";
+    opacity: 0.8;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+svg {
+	font-family: "Russo One", sans-serif;
+	width: 100%; height: 100%;
+}
+svg text {
+	animation: stroke 5s infinite alternate;
+	stroke-width: 2;
+	stroke: #22A071;
+	font-size: 100px;
+}
+@keyframes stroke {
+	0%   {
+		fill: rgba(47,204,132,0); stroke: rgba(34,160,113,1);
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(47,204,132,0); stroke: rgba(34,160,113,1); }
+	80%  {fill: rgba(47,204,132,0); stroke: rgba(34,160,113,1); stroke-width: 3; }
+	100% {
+		fill: rgba(47,204,132,1); stroke: rgba(34,160,113,0);
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
+
+.wrapper {background-color: transparent};
